@@ -52,6 +52,12 @@ class Student extends Person {
     sprintChallenge(subject) {
         return `${this.name} has begun sprint challenge on ${subject}`
     }
+    graduate() {
+        if (this.grade >= 70) {
+            return `Congratulations! With a score of ${this.grade}, you've graduated from Lambda School!`
+        }
+        return `You're not ready yet to fly on your own with a score of ${this.grade}.`
+    }
 }
 
 class ProjectManager extends Instructor {
@@ -216,3 +222,4 @@ const austin = new ProjectManager({
 // console.log(dan.catchPhrase)
 // console.log(dan.demo('React'))
 console.log(dan.grade(arvin, 'Redux'))
+console.log(arvin.graduate())
