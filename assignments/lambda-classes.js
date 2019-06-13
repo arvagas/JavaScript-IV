@@ -13,7 +13,7 @@ class Person {
 class Instructor extends Person {
     constructor(attributes) {
         super(attributes)
-        this.specialty = this.specialty
+        this.specialty = attributes.specialty
         this.favLanguage = attributes.favLanguage
         this.catchPhrase = attributes.catchPhrase
     }
@@ -33,7 +33,11 @@ class Student extends Person {
         this.favSubjects = attributes.favSubjects
     }
     listsSubjects() {
-        console.log(...favSubjects)
+        //Shows favorite subjects on one line
+        //return this.favSubjects.join(' ')
+
+        //Shows favorite subjects on separate lines (list)
+        return this.favSubjects.join('\n')
     }
     PRAssignment(subject) {
         return `${this.name} has submitted a PR for ${subject}`
@@ -57,6 +61,7 @@ class ProjectManager extends Instructor {
     }
 }
 
+
 const dan = new Instructor({
     name: 'Dan',
     age: 'Infinity',
@@ -66,6 +71,14 @@ const dan = new Instructor({
     catchPhrase: 'If you can do the thing, you can get paid to do the thing!',
 });
 
+const arvin = new Student({
+    name: 'Arvin',
+    age: 26,
+    location: 'New Jersey',
+    previousBackground: 'PT Tech',
+    className: 'Web21',
+    favSubjects: ['Html', 'CSS', 'JavaScript'],
+});
 const isaiah = new Student({
     name: 'Isaiah',
     age: 18,
@@ -170,3 +183,20 @@ const austin = new ProjectManager({
     catchPhrase: ":eggplant:",
 });
 
+console.log(arvin.speak())
+console.log(isaiah.previousBackground)
+console.log(isaiah.age)
+console.log(kevin.className)
+console.log(nisa.favSubjects)
+console.log(nisa.listsSubjects())
+console.log(joscelyn.PRAssignment('JS-IV'))
+console.log(joscelyn.sprintChallenge('Javascript'))
+console.log(marguel.gradClassName)
+console.log(brandon.favInstructor)
+console.log(mary.standUp('Web21'))
+console.log(christian.debugsCode(arvin, 'JS-IV'))
+console.log(dan.specialty)
+console.log(dan.favLanguage)
+console.log(dan.catchPhrase)
+console.log(dan.demo('React'))
+console.log(dan.grade(arvin, 'Redux'))
