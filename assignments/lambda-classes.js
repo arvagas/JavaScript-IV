@@ -21,7 +21,13 @@ class Instructor extends Person {
         return `Today we are learning about ${subject}`
     }
     grade(student,subject) {
-        return `${student.name} receives a perfect score on ${subject}`
+        // Code for MVP
+        // return `${student.name} receives a perfect score on ${subject}`
+
+        // Stretch goal
+        let blessRng = Math.round(Math.random() * (20 - (-20)) + -20)
+        student.grade = student.grade + blessRng
+        return `${student.name} receives ${blessRng} points on ${subject}. Grade is now ${student.grade}.`
     }
 }
 
@@ -31,6 +37,7 @@ class Student extends Person {
         this.previousBackground = attributes.previousBackground
         this.className = attributes.className
         this.favSubjects = attributes.favSubjects
+        this.grade = attributes.grade
     }
     listsSubjects() {
         //Shows favorite subjects on one line
@@ -78,6 +85,7 @@ const arvin = new Student({
     previousBackground: 'PT Tech',
     className: 'Web21',
     favSubjects: ['Html', 'CSS', 'JavaScript'],
+    grade: 70,
 });
 const isaiah = new Student({
     name: 'Isaiah',
@@ -86,6 +94,7 @@ const isaiah = new Student({
     previousBackground: 'High School last month',
     className: 'Web21',
     favSubjects: ['Html', 'CSS', 'JavaScript'],
+    grade: 95,
 });
 const kevin = new Student({
     name: "Kevin",
@@ -94,6 +103,7 @@ const kevin = new Student({
     previousBackground: "Table Games Dealer",
     className: "WEB21",
     favSubjects: ['Html', 'CSS', 'JavaScript'],
+    grade: 90,
 });
 const nisa = new Student({
     name: 'Nisa',
@@ -102,6 +112,7 @@ const nisa = new Student({
     previousBackground: 'Debt Collector',
     className: 'Web21',
     favSubjects: ['Html', 'CSS', 'JavaScript'],
+    grade: 85,
 });
 const joscelyn = new Student({
     name: "Joscelyn",
@@ -110,6 +121,7 @@ const joscelyn = new Student({
     previousBackground: "English teacher",
     className: 'Web21',
     favSubjects: ["Computer Science", "Philosophy", "English"],
+    grade: 80,
 });
 
 const marguel = new ProjectManager({
@@ -183,20 +195,24 @@ const austin = new ProjectManager({
     catchPhrase: ":eggplant:",
 });
 
-console.log(arvin.speak())
-console.log(isaiah.previousBackground)
-console.log(isaiah.age)
-console.log(kevin.className)
-console.log(nisa.favSubjects)
-console.log(nisa.listsSubjects())
-console.log(joscelyn.PRAssignment('JS-IV'))
-console.log(joscelyn.sprintChallenge('Javascript'))
-console.log(marguel.gradClassName)
-console.log(brandon.favInstructor)
-console.log(mary.standUp('Web21'))
-console.log(christian.debugsCode(arvin, 'JS-IV'))
-console.log(dan.specialty)
-console.log(dan.favLanguage)
-console.log(dan.catchPhrase)
-console.log(dan.demo('React'))
+// console.log(arvin.speak())
+// console.log(isaiah.previousBackground)
+// console.log(isaiah.age)
+// console.log(kevin.className)
+// console.log(nisa.favSubjects)
+// console.log(nisa.listsSubjects())
+// console.log(joscelyn.PRAssignment('JS-IV'))
+// console.log(joscelyn.sprintChallenge('Javascript'))
+// console.log(marguel.gradClassName)
+// console.log(brandon.favInstructor)
+// console.log(mary.standUp('Web21'))
+// console.log(christian.catchPhrase)
+// console.log(pat.specialty)
+// console.log(darren.demo('JS'))
+// console.log(pat.grade(isaiah, 'HTML'))
+// console.log(christian.debugsCode(kevin, 'JS-IV'))
+// console.log(dan.specialty)
+// console.log(dan.favLanguage)
+// console.log(dan.catchPhrase)
+// console.log(dan.demo('React'))
 console.log(dan.grade(arvin, 'Redux'))
