@@ -56,7 +56,7 @@ class Student extends Person {
         if (this.grade >= 70) {
             return `Congratulations! With a score of ${this.grade}, you've graduated from Lambda School!`
         }
-        return `You're not ready yet to fly on your own with a score of ${this.grade}.`
+        return `You're not ready yet to fly on your own with a score of ${this.grade}. Keep at it! I believe!`
     }
 }
 
@@ -221,5 +221,12 @@ const austin = new ProjectManager({
 // console.log(dan.favLanguage)
 // console.log(dan.catchPhrase)
 // console.log(dan.demo('React'))
+console.log(dan.grade(arvin, 'Redux'))
+console.log(dan.grade(arvin, 'Redux'))
+console.log(dan.grade(arvin, 'Redux'))
+console.log(arvin.graduate())
+console.log(dan.grade(arvin, 'Redux'))
+console.log(dan.grade(arvin, 'Redux'))
+console.log(dan.grade(arvin, 'Redux'))
 console.log(dan.grade(arvin, 'Redux'))
 console.log(arvin.graduate())
